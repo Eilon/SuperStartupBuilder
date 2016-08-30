@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FC437B77-7525-4B00-804F-21D91A1BD0E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{458C4104-BB09-4AE5-8334-DCC41EFAF1DD}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SuperStartupBuilder", "src\SuperStartupBuilder\SuperStartupBuilder.xproj", "{29C3615F-88F6-46DF-9A0F-973B2A119840}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SuperStartupBuilder.Lib", "src\SuperStartupBuilder.Lib\SuperStartupBuilder.Lib.xproj", "{4E42269F-6628-415A-9C9E-CF41BC449588}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29C3615F-88F6-46DF-9A0F-973B2A119840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29C3615F-88F6-46DF-9A0F-973B2A119840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29C3615F-88F6-46DF-9A0F-973B2A119840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29C3615F-88F6-46DF-9A0F-973B2A119840}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E42269F-6628-415A-9C9E-CF41BC449588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E42269F-6628-415A-9C9E-CF41BC449588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E42269F-6628-415A-9C9E-CF41BC449588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E42269F-6628-415A-9C9E-CF41BC449588}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{29C3615F-88F6-46DF-9A0F-973B2A119840} = {FC437B77-7525-4B00-804F-21D91A1BD0E2}
+		{4E42269F-6628-415A-9C9E-CF41BC449588} = {FC437B77-7525-4B00-804F-21D91A1BD0E2}
+	EndGlobalSection
+EndGlobal
