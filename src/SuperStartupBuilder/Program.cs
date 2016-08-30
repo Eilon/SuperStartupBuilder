@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using SuperStartupBuilder.Data;
 using SuperStartupBuilder.Models;
-using Microsoft.AspNetCore.Builder;
 
 namespace SuperStartupBuilder
 {
@@ -31,15 +28,15 @@ namespace SuperStartupBuilder
                     () => DateTime.IsLeapYear(DateTime.Now.Year),
                     subBuilder => subBuilder.WithBrowserLink()
                 )
-                .WithMiddleware(appBuilder =>
-                    appBuilder.Run(httpContext =>
-                    {
-                        throw new InvalidOperationException();
-                    }))
                 .WithStaticFiles()
                 .WithUserIdentity()
                     .WithUserType<ApplicationUser, ApplicationDbContext>()
-                .WithMvc();
+                .WithMvc()
+                .WithMiddleware(appBuilder =>
+                    appBuilder.Run(async httpContext =>
+                    {
+                        await httpContext.Response.WriteAsync("Hey!!!");
+                    }));
 
             superStartupBuilder.Run();
         }
